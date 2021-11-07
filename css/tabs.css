@@ -1,0 +1,92 @@
+.tabs {
+}
+
+[role="tablist"] {
+  margin: 0 0 4.8rem;
+  overflow: visible;
+}
+
+[role="tab"] {
+  position: relative;
+  margin: 0;
+  padding: 1.7rem 3.8rem;
+  border-radius: 8px;
+  overflow: visible;
+  font-family: inherit;
+  font-size: inherit;
+  font-size: 2.2rem;
+  transition: .3s background-color;
+  text-decoration: underline;
+}
+
+
+[role="tab"]:focus{
+  box-shadow: 3px 3px 10px #000;
+}
+
+
+[role="tab"]:hover::before,
+[role="tab"]:focus::before,
+[role="tab"][aria-selected="true"]::before {
+}
+
+[role="tab"][aria-selected="true"] {
+  background: #C7D2E9;
+  text-decoration: none;
+  border: 2px solid #5D16D5;
+  /* outline: 0; */
+}
+
+[role="tab"][aria-selected="true"]:not(:focus):not(:hover)::before {
+}
+
+[role="tab"][aria-selected="true"]::after {
+
+}
+
+[role="tab"]:hover,
+[role="tab"]:focus,
+[role="tab"]:active {
+  /* outline: 0; */
+  color: inherit;
+
+  background-color: #C7D2E9;
+}
+
+[role="tab"]:hover::before,
+[role="tab"]:focus::before {
+}
+
+[role="tabpanel"] {
+  position: relative;
+  z-index: 2;
+  /* padding: 0.5em 0.5em 0.7em; */
+}
+
+[role="tabpanel"].is-hidden {
+  display: none;
+}
+
+[role="tabpanel"]:focus {
+  border-color: #5D16D5;
+  /* box-shadow: 0 0 0.2em #5D16D5; */
+  /* outline: 0; */
+}
+
+[role="tabpanel"]:focus::after {
+  position: absolute;
+  bottom: 0;
+  right: -1px;
+  left: -1px;
+  /* border-bottom: 3px solid #5D16D5; */
+  /* border-radius: 0 0 0.2em 0.2em; */
+  content: '';
+}
+
+[role="tabpanel"] p {
+  margin: 0;
+}
+
+[role="tabpanel"] * + p {
+  margin-top: 1em;
+}
